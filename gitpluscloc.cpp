@@ -13,7 +13,7 @@ using namespace std;
 /*###################################*/
 
 
-#define VERSION "1.0"
+#define VERSION "1.2"
 
 
 
