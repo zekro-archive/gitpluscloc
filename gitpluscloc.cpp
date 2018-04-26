@@ -44,14 +44,14 @@ string exec(const char* cmd) {
 #if defined(WIN32) || defined(_WIN32) || defined(__WIN32) && !defined(__CYGWIN__)
         _pclose(pipe);
 #else
-        pclose();
+        pclose(pipe);
 #endif
         throw;
     }
 #if defined(WIN32) || defined(_WIN32) || defined(__WIN32) && !defined(__CYGWIN__)
     _pclose(pipe);
 #else
-    pclose();
+    pclose(pipe);
 #endif
     return result;
 }
