@@ -57,7 +57,7 @@ $ git push origin dev
 In the `preferences.h` file, you can set the location and name of the cloc generated file and some arguments which will be executed with cloc.
 
 > preferences.h
-```
+```cpp
 // This will be the location and the file name of the generated file
 #define CLOC_LOG_FILE "./CLOC_LOG.md"
 
