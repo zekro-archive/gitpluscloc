@@ -5,4 +5,4 @@
 // Defaultly, the cloc output will be saved as markdown
 // excluding Markdown, JSON and XML.
 // For more info about arguments, use 'cloc --help'
-#define CLOC_ARGUMENTS "--md --exclude-lang=md,json,xml"
+#define CLOC_ARGUMENTS "--md --exclude-lang=Markdown,JSON,XML"
