@@ -27,7 +27,11 @@ string exec(const char* cmd) {
     cout << "$ " << cmd << endl;
     char buffer[1024];
     string result = "";
+#if defined(WIN32) || defined(_WIN32) || defined(__WIN32) && !defined(__CYGWIN__)
     FILE* pipe = _popen(cmd, "r");
+#else
+    FILE* pipe = popen(cmd, "r");
+#endif
     if (!pipe)
         throw runtime_error("_popen() failed");
     try {
@@ -37,10 +41,18 @@ string exec(const char* cmd) {
         }
     }
     catch (...) {
+#if defined(WIN32) || defined(_WIN32) || defined(__WIN32) && !defined(__CYGWIN__)
         _pclose(pipe);
+#else
+        pclose();
+#endif
         throw;
     }
+#if defined(WIN32) || defined(_WIN32) || defined(__WIN32) && !defined(__CYGWIN__)
     _pclose(pipe);
+#else
+    pclose();
+#endif
     return result;
 }
 
