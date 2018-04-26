@@ -52,6 +52,22 @@ $ cgit commit -m "Added some stuff and fixed some bugs"
 $ git push origin dev
 ```
 
+# Preferences
+
+In the `preferences.h` file, you can set the location and name of the cloc generated file and some arguments which will be executed with cloc.
+
+> preferences.h
+```cpp
+// This will be the location and the file name of the generated file
+#define CLOC_LOG_FILE "./CLOC_LOG.md"
+
+// Here you can define some cloc command arguments
+// Defaultly, the cloc output will be saved as markdown
+// excluding Markdown, JSON and XML.
+// For more info about arguments, use 'cloc --help'
+#define CLOC_ARGUMENTS "--md --exclude-lang=md,json,xml"
+```
+
 ----
 
 © 2018 Ringo Hoffmann (zekro Development)  
