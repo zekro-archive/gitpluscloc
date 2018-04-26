@@ -7,7 +7,7 @@ then
 fi
 
 echo "Building cgit..."
-g++ gitpluscloc.cpp -o cgit
+g++ gitpluscloc.cpp preferences.h -o cgit
 
 echo "Installing cgit to '/usr/bin/cgit'..."
 mv cgit /usr/bin/cgit

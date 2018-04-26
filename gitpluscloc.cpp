@@ -4,17 +4,12 @@
 #include <stdio.h>
 #include <string>
 #include <algorithm>
+#include "preferences.h"
 
 using namespace std;
 
-/*########### PREFERENCES ###########*/
-#define CLOC_LOG_FILE "./CLOC_LOG.md"
-#define CLOC_ARGUMENTS "--md"
-/*###################################*/
 
-
-#define VERSION "1.2"
-
+#define VERSION "1.2.1"
 
 
 void pause() {
