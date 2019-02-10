@@ -1,6 +1,6 @@
  <div align="center">
      <h1>~ gitpluscloc ~</h1>
-     <strong>A rework of the original zekroBot in node.js</strong><br><br>
+     <strong>A little tool pushing cloc results when creating git commit</strong><br><br>
  </div>
 
 ---
